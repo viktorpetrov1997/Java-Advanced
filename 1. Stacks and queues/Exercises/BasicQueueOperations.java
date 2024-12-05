@@ -18,17 +18,17 @@ public class BasicQueueOperations
         int S = Integer.parseInt(commands.get(1));
         int X = Integer.parseInt(commands.get(2));
 
-        for (int i = 0; i < N; i++)
+        for(int i = 0; i < N; i++)
         {
             stack.offer(Integer.valueOf(numbers.get(i)));
         }
 
-        for (int i = 0; i < S; i++)
+        for(int i = 0; i < S; i++)
         {
             stack.poll();
         }
 
-        if (stack.contains(X))
+        if(stack.contains(X))
         {
             System.out.println("true");
         }

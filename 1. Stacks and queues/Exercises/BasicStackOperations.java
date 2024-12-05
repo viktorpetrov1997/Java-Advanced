@@ -37,6 +37,7 @@ public class BasicStackOperations
 
         int min = Integer.MAX_VALUE;
         boolean isXPresent = false;
+
         while(!stack.isEmpty())
         {
             int number = stack.pop();
@@ -44,6 +45,7 @@ public class BasicStackOperations
             {
                 min = number;
             }
+
             if(number == X)
             {
                 System.out.println("true");

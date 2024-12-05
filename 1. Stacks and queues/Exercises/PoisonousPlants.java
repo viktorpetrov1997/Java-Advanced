@@ -16,11 +16,12 @@ public class PoisonousPlants
                 .mapToInt(Integer::parseInt)
                 .toArray();
 
-
         ArrayDeque<Integer> prevPlants = new ArrayDeque<>();
         int[] days = new int[plants.length];
+
         prevPlants.push(0);
-        for (int x = 1; x < plants.length; x++)
+
+        for(int x = 1; x < plants.length; x++)
         {
             int maxDays = 0;
             while(prevPlants.size() > 0 && plants[prevPlants.peek()] >= plants[x])

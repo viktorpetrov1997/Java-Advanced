@@ -22,45 +22,43 @@ public class InfixToPostfix
 
         boolean isOpenBracket = false;
 
-        for (String tokens : scanner.nextLine().split("\\s+"))
+        for(String tokens : scanner.nextLine().split("\\s+"))
         {
-
             char token = tokens.charAt(0);
 
-            if (tokens.length() > 1)
+            if(tokens.length() > 1)
             {
                 stringBuffer.append(tokens + " ");
                 continue;
             }
 
-            if (operators.containsKey(token))
+            if(operators.containsKey(token))
             {
-
                 // operators for comparing by precedence
                 int a = operators.get(token);
                 int b = stack.isEmpty() ? 0 : operators.get(stack.peek());
 
                 // open bracket
-                if (token == '(')
+                if(token == '(')
                 {
                     stack.push(token);
                     isOpenBracket = true;
                 }
 
                 // close bracket
-                else if (token == ')')
+                else if(token == ')')
                 {
-
                     // pop the operator from the operator stack onto the output queue.
-                    while (!stack.isEmpty() && stack.peek() != '(')
+                    while(!stack.isEmpty() && stack.peek() != '(')
                     {
                         stringBuffer.append(stack.pop());
                         stringBuffer.append(" ");
                     }
+
                     isOpenBracket = false;
 
                     // pop the open bracket
-                    if (stack.isEmpty())
+                    if(stack.isEmpty())
                     {
                         // there are mismatched parentheses.
                         return;
@@ -72,13 +70,13 @@ public class InfixToPostfix
                 }
 
                 // open bracket flag
-                else if (isOpenBracket)
+                else if(isOpenBracket)
                 {
                     stack.push(token);
                 }
 
                 // there is an operator at the top of the operator stack with greater precedence
-                else if (a > b)
+                else if(a > b)
                 {
                     stack.push(token);
                 }
@@ -87,7 +85,7 @@ public class InfixToPostfix
                 else
                 {
                     // pop operators from the operator stack onto the output queue.
-                    while (!stack.isEmpty() && a <= operators.get(stack.peek()))
+                    while(!stack.isEmpty() && a <= operators.get(stack.peek()))
                     {
                         stringBuffer.append(stack.pop());
                         stringBuffer.append(" ");
@@ -95,7 +93,6 @@ public class InfixToPostfix
                     // push the operator onto the operator stack.
                     stack.push(token);
                 }
-
             }
             else
             {
@@ -105,13 +102,12 @@ public class InfixToPostfix
         }
 
         // append operators from stack
-        while (!stack.isEmpty())
+        while(!stack.isEmpty())
         {
-
             char token = stack.pop();
 
             // there are mismatched parentheses.
-            if (token == '(' || token == ')')
+            if(token == '(' || token == ')')
             {
                 return;
             }

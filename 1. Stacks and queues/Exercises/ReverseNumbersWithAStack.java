@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-public class ReverseNumberWithAStack
+public class ReverseNumbersWithAStack
 {
     public static void main(String[] args)
     {

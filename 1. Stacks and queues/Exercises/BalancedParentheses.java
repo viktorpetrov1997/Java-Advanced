@@ -16,17 +16,16 @@ public class BalancedParentheses
         boolean areBalanced = false;
 
         String input = scanner.nextLine();
-        for (int index = 0; index < input.length(); index++)
+        for(int index = 0; index < input.length(); index++)
         {
             char currentBracket = input.charAt(index);
-            if (currentBracket == '(' || currentBracket == '{' || currentBracket == '[')
+            if(currentBracket == '(' || currentBracket == '{' || currentBracket == '[')
             {
                 openBrackets.push(currentBracket);
             }
-            else if (currentBracket == ')' || currentBracket == '}' || currentBracket == ']')
+            else if(currentBracket == ')' || currentBracket == '}' || currentBracket == ']')
             {
-
-                if (openBrackets.isEmpty())
+                if(openBrackets.isEmpty())
                 {
                     areBalanced = false;
                     break;
@@ -34,15 +33,15 @@ public class BalancedParentheses
 
                 char lastOpenBracket = openBrackets.pop();
 
-                if (lastOpenBracket == '(' && currentBracket == ')')
+                if(lastOpenBracket == '(' && currentBracket == ')')
                 {
                     areBalanced = true;
                 }
-                else if (lastOpenBracket == '{' && currentBracket == '}')
+                else if(lastOpenBracket == '{' && currentBracket == '}')
                 {
                     areBalanced = true;
                 }
-                else if (lastOpenBracket == '[' && currentBracket == ']')
+                else if(lastOpenBracket == '[' && currentBracket == ']')
                 {
                     areBalanced = true;
                 }
