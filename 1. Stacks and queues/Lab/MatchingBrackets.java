@@ -1,4 +1,4 @@
-package StacksAndQueues;
+package StacksAndQueues.Lab;
 
 import java.util.ArrayDeque;
 import java.util.Scanner;
@@ -13,15 +13,15 @@ public class MatchingBrackets
 
         String input = scanner.nextLine();
 
-        for (int i = 0; i < input.length(); i++)
+        for(int i = 0; i < input.length(); i++)
         {
             char currentSymbol = input.charAt(i);
 
-            if (currentSymbol == '(')
+            if(currentSymbol == '(')
             {
                 indexes.push(i);
             }
-            else if (currentSymbol == ')')
+            else if(currentSymbol == ')')
             {
                 int startIndex = indexes.pop();
                 String subExpression = input.substring(startIndex, i + 1);

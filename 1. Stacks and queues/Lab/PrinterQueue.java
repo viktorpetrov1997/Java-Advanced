@@ -1,4 +1,4 @@
-package StacksAndQueues;
+package StacksAndQueues.Lab;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -13,7 +13,6 @@ public class PrinterQueue
         Deque<String> files = new ArrayDeque<>();
 
         String input = scanner.nextLine();
-
         while(!input.equals("print"))
         {
             if(input.equals("cancel"))
@@ -35,7 +34,7 @@ public class PrinterQueue
             input = scanner.nextLine();
         }
 
-        for (String file : files)
+        for(String file : files)
         {
             System.out.println(file);
         }

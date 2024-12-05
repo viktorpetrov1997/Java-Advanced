@@ -1,4 +1,4 @@
-package StacksAndQueues;
+package StacksAndQueues.Lab;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -12,15 +12,6 @@ public class SimpleCalculator
         List<String> expressionParts = Arrays.stream(scanner.nextLine().split(" ")).collect(Collectors.toList());
 
         ArrayDeque<String> stack = new ArrayDeque<>(expressionParts);
-
-        //stack.addAll(expressionParts);
-
-        /*Collections.reverse(expressionParts);
-
-        for(String part : expressionParts)
-        {
-            stack.push(part);
-        }*/
 
         while(stack.size() > 1)
         {

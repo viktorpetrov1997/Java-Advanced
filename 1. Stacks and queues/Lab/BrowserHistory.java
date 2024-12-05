@@ -1,4 +1,4 @@
-package StacksAndQueues;
+package StacksAndQueues.Lab;
 
 import java.util.ArrayDeque;
 import java.util.Scanner;

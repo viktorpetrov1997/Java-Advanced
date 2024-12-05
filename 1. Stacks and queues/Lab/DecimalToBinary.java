@@ -1,4 +1,4 @@
-package StacksAndQueues;
+package StacksAndQueues.Lab;
 
 import java.lang.reflect.Array;
 import java.util.ArrayDeque;
