@@ -13,18 +13,18 @@ public class ReadingAMatrix
 
         int[][] matrix = new int[rows][cols];
 
-        for (int row = 0; row < rows; row++)
+        for(int row = 0; row < rows; row++)
         {
             String[] inputTokens = scanner.nextLine().split(" ");
-            for (int col = 0; col < cols; col++)
+            for(int col = 0; col < cols; col++)
             {
                 matrix[row][col] = Integer.parseInt(inputTokens[col]);
             }
         }
 
-        for (int row = 0; row < rows; row++)
+        for(int row = 0; row < rows; row++)
         {
-            for (int col = 0; col < cols; col++)
+            for(int col = 0; col < cols; col++)
             {
                 System.out.print(matrix[row][col] + " ");
             }

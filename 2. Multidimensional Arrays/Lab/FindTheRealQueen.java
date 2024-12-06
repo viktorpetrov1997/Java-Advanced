@@ -30,14 +30,17 @@ public class FindTheRealQueen
             {
                 return false; // check lower right diagonal
             }
+
             if(row - i >= 0 && col - i >= 0 && matrix[row - i][col - i] == 'q')
             {
                 return false; // check upper left diagonal
             }
+
             if(row - i >= 0 && col + i < 8 && matrix[row - i][col + i] == 'q')
             {
                 return false; // check upper right diagonal
             }
+
             if(row + i < 8 && col - i >= 0 && matrix[row + i][col - i] == 'q')
             {
                 return false; // check lower left diagonal
