@@ -1,4 +1,4 @@
-package MultidimensionalArrays;
+package MultidimensionalArrays.Lab;
 
 import java.util.Scanner;
 
@@ -13,10 +13,10 @@ public class IntersectionOfTwoMatrices
 
         String[][] firstMatrix = new String[matrixRows][matrixCols];
 
-        for (int row = 0; row < matrixRows; row++)
+        for(int row = 0; row < matrixRows; row++)
         {
             String[] inputTokens = scanner.nextLine().split(" ");
-            for (int col = 0; col < matrixCols; col++)
+            for(int col = 0; col < matrixCols; col++)
             {
                 firstMatrix[row][col] = inputTokens[col];
             }
@@ -24,18 +24,18 @@ public class IntersectionOfTwoMatrices
 
         String[][] secondMatrix = new String[matrixRows][matrixCols];
 
-        for (int row = 0; row < matrixRows; row++)
+        for(int row = 0; row < matrixRows; row++)
         {
             String[] inputTokens = scanner.nextLine().split(" ");
-            for (int col = 0; col < matrixCols; col++)
+            for(int col = 0; col < matrixCols; col++)
             {
                 secondMatrix[row][col] = inputTokens[col];
             }
         }
 
-        for (int row = 0; row < matrixRows; row++)
+        for(int row = 0; row < matrixRows; row++)
         {
-            for (int col = 0; col < matrixCols; col++)
+            for(int col = 0; col < matrixCols; col++)
             {
                 if(firstMatrix[row][col].equals(secondMatrix[row][col]))
                 {

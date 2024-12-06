@@ -1,4 +1,4 @@
-package MultidimensionalArrays;
+package MultidimensionalArrays.Lab;
 
 import java.util.Scanner;
 
@@ -15,10 +15,10 @@ public class SumMatrixElements
         int[][] matrix = new int[matrixRows][matrixCols];
 
         int sum = 0;
-        for (int row = 0; row < matrixRows; row++)
+        for(int row = 0; row < matrixRows; row++)
         {
             String[] inputTokens = scanner.nextLine().split(", ");
-            for (int col = 0; col < matrixCols; col++)
+            for(int col = 0; col < matrixCols; col++)
             {
                 sum += Integer.parseInt(inputTokens[col]);
             }

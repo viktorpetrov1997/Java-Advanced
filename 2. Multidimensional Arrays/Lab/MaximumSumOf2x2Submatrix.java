@@ -1,4 +1,4 @@
-package MultidimensionalArrays;
+package MultidimensionalArrays.Lab;
 
 import java.util.Scanner;
 
@@ -14,10 +14,10 @@ public class MaximumSumOf2x2Submatrix
 
         int[][] matrix = new int[matrixRows][matrixCols];
 
-        for (int row = 0; row < matrixRows; row++)
+        for(int row = 0; row < matrixRows; row++)
         {
             String[] inputTokens = scanner.nextLine().split(", ");
-            for (int col = 0; col < matrixCols; col++)
+            for(int col = 0; col < matrixCols; col++)
             {
                 matrix[row][col] = Integer.parseInt(inputTokens[col]);
             }
@@ -27,9 +27,9 @@ public class MaximumSumOf2x2Submatrix
         int bestRow = 0;
         int bestCol = 0;
 
-        for (int row = 0; row < matrixRows - 1; row++)
+        for(int row = 0; row < matrixRows - 1; row++)
         {
-            for (int col = 0; col < matrixCols - 1; col++)
+            for(int col = 0; col < matrixCols - 1; col++)
             {
                 int currentSum = matrix[row][col] + matrix[row][col + 1] + matrix[row + 1][col] + matrix[row + 1][col + 1];
                 if(currentSum > maxSum)

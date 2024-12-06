@@ -1,4 +1,4 @@
-package MultidimensionalArrays;
+package MultidimensionalArrays.Lab;
 
 import java.util.Scanner;
 
@@ -14,10 +14,10 @@ public class CompareMatrices
 
         int[][] firstMatrix = new int[firstMatrixRows][firstMatrixCols];
 
-        for (int row = 0; row < firstMatrixRows; row++)
+        for(int row = 0; row < firstMatrixRows; row++)
         {
             String[] inputTokens = scanner.nextLine().split(" ");
-            for (int col = 0; col < firstMatrixCols; col++)
+            for(int col = 0; col < firstMatrixCols; col++)
             {
                 firstMatrix[row][col] = Integer.parseInt(inputTokens[col]);
             }
@@ -29,26 +29,26 @@ public class CompareMatrices
 
         int[][] secondMatrix = new int[secondMatrixRows][secondMatrixCols];
 
-        for (int row = 0; row < secondMatrixRows; row++)
+        for(int row = 0; row < secondMatrixRows; row++)
         {
             String[] inputTokens = scanner.nextLine().split(" ");
-            for (int col = 0; col < secondMatrixCols; col++)
+            for(int col = 0; col < secondMatrixCols; col++)
             {
                 secondMatrix[row][col] = Integer.parseInt(inputTokens[col]);
             }
         }
 
-        if (firstMatrixRows != secondMatrixRows || firstMatrixCols != secondMatrixCols)
+        if(firstMatrixRows != secondMatrixRows || firstMatrixCols != secondMatrixCols)
         {
             System.out.println("not equal");
             return;
         }
 
-        for (int row = 0; row < firstMatrixRows; row++)
+        for(int row = 0; row < firstMatrixRows; row++)
         {
-            for (int col = 0; col < secondMatrixCols; col++)
+            for(int col = 0; col < secondMatrixCols; col++)
             {
-                if (firstMatrix[row][col] != secondMatrix[row][col])
+                if(firstMatrix[row][col] != secondMatrix[row][col])
                 {
                     System.out.println("not equal");
                     return;

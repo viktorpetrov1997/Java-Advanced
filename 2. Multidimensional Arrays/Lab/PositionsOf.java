@@ -1,4 +1,4 @@
-package MultidimensionalArrays;
+package MultidimensionalArrays.Lab;
 
 import java.util.Scanner;
 
@@ -14,10 +14,10 @@ public class PositionsOf
 
         int[][] matrix = new int[matrixRows][matrixCols];
 
-        for (int row = 0; row < matrixRows; row++)
+        for(int row = 0; row < matrixRows; row++)
         {
             String[] inputTokens = scanner.nextLine().split(" ");
-            for (int col = 0; col < matrixCols; col++)
+            for(int col = 0; col < matrixCols; col++)
             {
                 matrix[row][col] = Integer.parseInt(inputTokens[col]);
             }
@@ -26,9 +26,9 @@ public class PositionsOf
         int number = Integer.parseInt(scanner.nextLine());
 
         boolean isFound = false;
-        for (int row = 0; row < matrixRows; row++)
+        for(int row = 0; row < matrixRows; row++)
         {
-            for (int col = 0; col < matrixCols; col++)
+            for(int col = 0; col < matrixCols; col++)
             {
                 if(matrix[row][col] == number)
                 {
