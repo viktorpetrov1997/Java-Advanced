@@ -9,13 +9,12 @@ public class DiagonalDifference
         Scanner scanner = new Scanner(System.in);
 
         int matrixSize = Integer.parseInt(scanner.nextLine());
-
         int[][] matrix = new int[matrixSize][matrixSize];
 
-        for (int row = 0; row < matrixSize; row++)
+        for(int row = 0; row < matrixSize; row++)
         {
             String[] inputTokens = scanner.nextLine().split(" ");
-            for (int col = 0; col < matrixSize; col++)
+            for(int col = 0; col < matrixSize; col++)
             {
                 matrix[row][col] = Integer.parseInt(inputTokens[col]);
             }
@@ -34,7 +33,6 @@ public class DiagonalDifference
         }
 
         int difference = Math.abs(primaryDiagonal - secondaryDiagonal);
-
         System.out.println(difference);
     }
 }

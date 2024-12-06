@@ -10,12 +10,12 @@ public class MaximalSum
         Scanner scanner = new Scanner(System.in);
 
         String[] matrixSize = scanner.nextLine().split(" ");
+
         int rows = Integer.parseInt(matrixSize[0]);
         int cols = Integer.parseInt(matrixSize[1]);
-
         int[][] matrix = new int[rows][cols];
 
-        for (int i = 0; i < rows; i++)
+        for(int i = 0; i < rows; i++)
         {
             int[] numbers = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
             matrix[i] = numbers;

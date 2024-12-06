@@ -9,9 +9,9 @@ public class CompareMatrices
         Scanner scanner = new Scanner(System.in);
 
         String[] firstMatrixSize = scanner.nextLine().split(" ");
+
         int firstMatrixRows = Integer.parseInt(firstMatrixSize[0]);
         int firstMatrixCols = Integer.parseInt(firstMatrixSize[1]);
-
         int[][] firstMatrix = new int[firstMatrixRows][firstMatrixCols];
 
         for(int row = 0; row < firstMatrixRows; row++)
@@ -24,9 +24,9 @@ public class CompareMatrices
         }
 
         String[] secondMatrixSize = scanner.nextLine().split(" ");
+
         int secondMatrixRows = Integer.parseInt(secondMatrixSize[0]);
         int secondMatrixCols = Integer.parseInt(secondMatrixSize[1]);
-
         int[][] secondMatrix = new int[secondMatrixRows][secondMatrixCols];
 
         for(int row = 0; row < secondMatrixRows; row++)

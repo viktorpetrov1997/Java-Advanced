@@ -88,7 +88,6 @@ public class StringMatrixRotation
 
         int rows = words.size();
         int cols = maxLength;
-
         char[][] matrix = new char[rows][cols];
 
         for(int i = 0; i < rows; i++)
@@ -105,7 +104,6 @@ public class StringMatrixRotation
                 }
             }
         }
-
         rotate(matrix,rows,cols,angle);
     }
 }

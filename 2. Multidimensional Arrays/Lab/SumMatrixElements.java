@@ -9,9 +9,9 @@ public class SumMatrixElements
         Scanner scanner = new Scanner(System.in);
 
         String[] matrixSize = scanner.nextLine().split(", ");
+
         int matrixRows = Integer.parseInt(matrixSize[0]);
         int matrixCols = Integer.parseInt(matrixSize[1]);
-
         int[][] matrix = new int[matrixRows][matrixCols];
 
         int sum = 0;

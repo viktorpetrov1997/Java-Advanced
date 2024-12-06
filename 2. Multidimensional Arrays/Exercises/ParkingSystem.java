@@ -21,16 +21,15 @@ public class ParkingSystem
         Scanner scanner = new Scanner(System.in);
 
         String[] dimensions = scanner.nextLine().split(" ");
+
         int rows = Integer.parseInt(dimensions[0]);
         int cols = Integer.parseInt(dimensions[1]);
-
         int[][] parkingLot = new int[rows][cols];
-
-        String input = scanner.nextLine();
 
         int countFirstColumnSteps = 0;
         int countSteps = 0;
 
+        String input = scanner.nextLine();
         while(!input.equals("stop"))
         {
             String[] commandArray = input.split(" ");
@@ -81,12 +80,15 @@ public class ParkingSystem
                             }
                         }
                     }
+
                     parkingLot[row][closestSpot] = 1;
                     countSteps = 0;
+
                     for(int i = 1; i <= closestSpot; i++)
                     {
                         ++countSteps;
                     }
+
                     int steps = countFirstColumnSteps + countSteps;
                     System.out.println(steps);
                 }

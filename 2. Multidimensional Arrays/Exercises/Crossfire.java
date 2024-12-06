@@ -27,10 +27,10 @@ public class Crossfire
 
         int count = 1;
 
-        for (int row = 0; row < rows; row++)
+        for(int row = 0; row < rows; row++)
         {
             matrix.add(new ArrayList<>());
-            for (int col = 0; col < cols; col++)
+            for(int col = 0; col < cols; col++)
             {
                 matrix.get(row).add(count++);
             }
@@ -38,7 +38,7 @@ public class Crossfire
 
         String line = reader.readLine();
 
-        while (!line.equals("Nuke it from orbit"))
+        while(!line.equals("Nuke it from orbit"))
         {
             String[] data = line.split(" ");
 
@@ -46,17 +46,17 @@ public class Crossfire
             int col = Integer.parseInt(data[1]);
             int radius = Integer.parseInt(data[2]);
 
-            for (int i = row - radius; i <= row + radius; i++)
+            for(int i = row - radius; i <= row + radius; i++)
             {
-                if (isInRange(i, col, matrix) && i != row)
+                if(isInRange(i, col, matrix) && i != row)
                 {
                     matrix.get(i).remove(col);
                 }
             }
 
-            for (int i = col + radius; i >= col - radius; i--)
+            for(int i = col + radius; i >= col - radius; i--)
             {
-                if (isInRange(row, i, matrix))
+                if(isInRange(row, i, matrix))
                 {
                     matrix.get(row).remove(i);
                 }
@@ -68,7 +68,7 @@ public class Crossfire
 
         for(List<Integer> integers : matrix)
         {
-            for (Integer integer : integers)
+            for(Integer integer : integers)
             {
                 System.out.print(integer + " ");
             }

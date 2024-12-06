@@ -18,33 +18,33 @@ public class TheHeiganDance
     {
         Scanner scanner = new Scanner(System.in);
 
-        double hsPoints = 3000000.0;
+        double heigansPoints = 3000000.0;
         int playerPoints = 18500;
 
-        int startPlRow = 7;
-        int startPlCol = 7;
+        int startPlayerRow = 7;
+        int startPlayerCol = 7;
 
         String lastSpell = "";
         boolean activeCloud = false;
 
         double damage = Double.parseDouble(scanner.nextLine());
 
-        while (playerPoints > 0 && hsPoints > 0)
+        while(playerPoints > 0 && heigansPoints > 0)
         {
-            hsPoints -= damage;
+            heigansPoints -= damage;
 
-            if (activeCloud)
+            if(activeCloud)
             {
                 playerPoints -= 3500;
                 activeCloud = false;
 
-                if (playerPoints < 0)
+                if(playerPoints < 0)
                 {
                     break;
                 }
             }
 
-            if (hsPoints < 0)
+            if(heigansPoints < 0)
             {
                 break;
             }
@@ -56,13 +56,14 @@ public class TheHeiganDance
             int col = Integer.parseInt(tokens[2]);
 
             boolean[][] hsChamber = new boolean[15][15];
-            for (int i = row - 1; i <= row + 1; i++)
+
+            for(int i = row - 1; i <= row + 1; i++)
             {
-                if (i >= 0 && i < hsChamber.length)
+                if(i >= 0 && i < hsChamber.length)
                 {
-                    for (int j = col - 1; j <= col + 1; j++)
+                    for(int j = col - 1; j <= col + 1; j++)
                     {
-                        if (j >= 0 && j < hsChamber[row].length)
+                        if(j >= 0 && j < hsChamber[row].length)
                         {
                             hsChamber[i][j] = true;
                         }
@@ -70,28 +71,28 @@ public class TheHeiganDance
                 }
             }
 
-            if(hsChamber[startPlRow][startPlCol])
+            if(hsChamber[startPlayerRow][startPlayerCol])
             {
-                if (isRowValid(hsChamber, startPlRow - 1) && !hsChamber[startPlRow - 1][startPlCol])
+                if(isRowValid(hsChamber, startPlayerRow - 1) && !hsChamber[startPlayerRow - 1][startPlayerCol])
                 {
-                    startPlRow--;
+                    startPlayerRow--;
                 }
-                else if (isColValid(hsChamber, startPlCol + 1) && !hsChamber[startPlRow][startPlCol + 1])
+                else if(isColValid(hsChamber, startPlayerCol + 1) && !hsChamber[startPlayerRow][startPlayerCol + 1])
                 {
-                    startPlCol++;
+                    startPlayerCol++;
                 }
-                else if (isRowValid(hsChamber, startPlRow + 1) && !hsChamber[startPlRow + 1][startPlCol])
+                else if(isRowValid(hsChamber, startPlayerRow + 1) && !hsChamber[startPlayerRow + 1][startPlayerCol])
                 {
-                    startPlRow++;
+                    startPlayerRow++;
                 }
-                else if (isColValid(hsChamber, startPlCol - 1) && !hsChamber[startPlRow][startPlCol - 1])
+                else if(isColValid(hsChamber, startPlayerCol - 1) && !hsChamber[startPlayerRow][startPlayerCol - 1])
                 {
-                    startPlCol--;
+                    startPlayerCol--;
                 }
 
-                if (hsChamber[startPlRow][startPlCol])
+                if(hsChamber[startPlayerRow][startPlayerCol])
                 {
-                    switch (spell)
+                    switch(spell)
                     {
                         case "Cloud":
                             playerPoints -= 3500;
@@ -109,15 +110,16 @@ public class TheHeiganDance
             }
         }
 
-        if (hsPoints > 0)
+        if(heigansPoints > 0)
         {
-            System.out.printf("Heigan: %.2f%n", hsPoints);
+            System.out.printf("Heigan: %.2f%n", heigansPoints);
         }
         else
         {
             System.out.println("Heigan: Defeated!");
         }
-        if (playerPoints > 0)
+
+        if(playerPoints > 0)
         {
             System.out.printf("Player: %d%n", playerPoints);
         }
@@ -126,6 +128,6 @@ public class TheHeiganDance
             System.out.println("Player: Killed by " + lastSpell);
         }
 
-        System.out.println("Final position: " + startPlRow + ", " + startPlCol);
+        System.out.println("Final position: " + startPlayerRow + ", " + startPlayerCol);
     }
 }

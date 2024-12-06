@@ -36,12 +36,12 @@ public class MatrixShuffling
         Scanner scanner = new Scanner(System.in);
 
         String[] matrixSize = scanner.nextLine().split(" ");
+
         int rows = Integer.parseInt(matrixSize[0]);
         int cols = Integer.parseInt(matrixSize[1]);
-
         String[][] matrix = new String[rows][cols];
 
-        for (int i = 0; i < rows; i++)
+        for(int i = 0; i < rows; i++)
         {
             String[] input = scanner.nextLine().split(" ");
             matrix[i] = input;
