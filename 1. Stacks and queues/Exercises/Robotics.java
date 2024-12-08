@@ -48,7 +48,7 @@ public class Robotics
     private static LinkedHashMap<String, Integer> getRobotsMap(String[] robotsData)
     {
         LinkedHashMap<String, Integer> robots = new LinkedHashMap<>();
-        for (String robotData : robotsData)
+        for(String robotData : robotsData)
         {
             String robotName = robotData.split("-")[0];
             int processingTime = Integer.parseInt(robotData.split("-")[1]);
