@@ -1,4 +1,4 @@
-package SetsAndMapsAdvanced;
+package SetsAndMapsAdvanced.Lab;
 
 import java.util.LinkedHashSet;
 import java.util.Scanner;
@@ -14,14 +14,14 @@ public class ParkingLot
         String input = scanner.nextLine();
         while(!input.equals("END"))
         {
-            String[] reminder = input.split(", ");
-            if(reminder[0].equals("IN"))
+            String[] commandParts = input.split(", ");
+            if(commandParts[0].equals("IN"))
             {
-                parkingLot.add(reminder[1]);
+                parkingLot.add(commandParts[1]);
             }
             else
             {
-                parkingLot.remove(reminder[1]);
+                parkingLot.remove(commandParts[1]);
             }
             input = scanner.nextLine();
         }
@@ -32,9 +32,9 @@ public class ParkingLot
         }
         else
         {
-            for (String vehicle : parkingLot)
+            for(String carNumber : parkingLot)
             {
-                System.out.println(vehicle);
+                System.out.println(carNumber);
             }
         }
     }

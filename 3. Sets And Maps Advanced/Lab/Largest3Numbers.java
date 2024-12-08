@@ -1,4 +1,4 @@
-package SetsAndMapsAdvanced;
+package SetsAndMapsAdvanced.Lab;
 
 import java.util.Arrays;
 import java.util.List;

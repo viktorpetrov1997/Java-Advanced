@@ -1,4 +1,4 @@
-package SetsAndMapsAdvanced;
+package SetsAndMapsAdvanced.Lab;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -17,21 +17,22 @@ public class ProductShop
         while(!input.equals("Revision"))
         {
             String[] productShopInfo = input.split(", ");
+
             String shop = productShopInfo[0];
             String product = productShopInfo[1];
             double price = Double.parseDouble(productShopInfo[2]);
+
             LinkedHashMap<String, Double> productPrice = new LinkedHashMap<>();
-            productPrice.put(product,price);
+            productPrice.put(product, price);
 
             if(productShop.containsKey(shop))
             {
-                productShop.get(shop).put(product,price);
+                productShop.get(shop).put(product, price);
             }
             else
             {
-                productShop.put(shop,productPrice);
+                productShop.put(shop, productPrice);
             }
-
             input = scanner.nextLine();
         }
 

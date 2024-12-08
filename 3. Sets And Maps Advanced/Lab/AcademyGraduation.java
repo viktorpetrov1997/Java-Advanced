@@ -1,4 +1,4 @@
-package SetsAndMapsAdvanced;
+package SetsAndMapsAdvanced.Lab;
 
 import java.text.DecimalFormat;
 import java.util.*;
@@ -12,7 +12,7 @@ public class AcademyGraduation
 
         int numberOfStudents = Integer.parseInt(scanner.nextLine());
 
-        LinkedHashMap<String, Double> studentGrades = new LinkedHashMap<>();
+        TreeMap<String, Double> studentGrades = new TreeMap<>();
 
         for(int i = 0; i < numberOfStudents; i++)
         {
@@ -21,10 +21,10 @@ public class AcademyGraduation
                     .map(Double::parseDouble).collect(Collectors.toList());
 
             double average = grades.stream().mapToDouble(Double::doubleValue).average().orElse(0.0);
-            studentGrades.put(studentName,average);
+            studentGrades.put(studentName, average);
         }
 
-        for (Map.Entry<String, Double> entry : studentGrades.entrySet())
+        for(Map.Entry<String, Double> entry : studentGrades.entrySet())
         {
             System.out.printf("%s is graduated with %f\n", entry.getKey(), entry.getValue());
         }

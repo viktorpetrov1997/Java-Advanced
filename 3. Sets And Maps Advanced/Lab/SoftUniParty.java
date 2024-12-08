@@ -1,4 +1,4 @@
-package SetsAndMapsAdvanced;
+package SetsAndMapsAdvanced.Lab;
 
 import java.util.Scanner;
 import java.util.Set;
@@ -10,10 +10,9 @@ public class SoftUniParty
     {
         Scanner scanner = new Scanner(System.in);
 
-        String input = scanner.nextLine();
-
         Set<String> guests = new TreeSet<>();
 
+        String input = scanner.nextLine();
         while(!input.equals("PARTY"))
         {
             guests.add(input);
@@ -29,6 +28,7 @@ public class SoftUniParty
         }
 
         System.out.println(guests.size());
+
         for(String guest : guests)
         {
             System.out.println(guest);

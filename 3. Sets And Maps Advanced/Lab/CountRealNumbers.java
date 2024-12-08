@@ -1,4 +1,4 @@
-package SetsAndMapsAdvanced;
+package SetsAndMapsAdvanced.Lab;
 
 import java.util.Arrays;
 import java.util.LinkedHashMap;
@@ -23,7 +23,7 @@ public class CountRealNumbers
 
         for(Map.Entry<Double, Integer> entry : occurrencesOfNumber.entrySet())
         {
-            System.out.printf("%.1f -> %d%n",entry.getKey(),entry.getValue());
+            System.out.printf("%.1f -> %d%n", entry.getKey(), entry.getValue());
         }
     }
 }

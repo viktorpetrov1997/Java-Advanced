@@ -1,4 +1,4 @@
-package SetsAndMapsAdvanced;
+package SetsAndMapsAdvanced.Lab;
 
 import java.util.Arrays;
 import java.util.LinkedHashSet;
@@ -21,15 +21,15 @@ public class Voina
                 .map(Integer::parseInt)
                 .collect(Collectors.toCollection(LinkedHashSet::new));
 
-        for (int round = 0; round < 50; round++)
+        for(int round = 0; round < 50; round++)
         {
-            if (firstPlayer.isEmpty())
+            if(firstPlayer.isEmpty())
             {
                 System.out.println("Second player win!");
                 return;
             }
 
-            if (secondPlayer.isEmpty())
+            if(secondPlayer.isEmpty())
             {
                 System.out.println("First player win!");
                 return;
@@ -56,11 +56,11 @@ public class Voina
         int firstPlayerDeckSize = firstPlayer.size();
         int secondPlayerDeckSize = secondPlayer.size();
 
-        if (firstPlayerDeckSize > secondPlayerDeckSize)
+        if(firstPlayerDeckSize > secondPlayerDeckSize)
         {
             System.out.println("First player win!");
         }
-        else if (secondPlayerDeckSize > firstPlayerDeckSize)
+        else if(secondPlayerDeckSize > firstPlayerDeckSize)
         {
             System.out.println("Second player win!");
         }

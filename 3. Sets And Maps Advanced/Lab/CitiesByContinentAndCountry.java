@@ -1,4 +1,4 @@
-package SetsAndMapsAdvanced;
+package SetsAndMapsAdvanced.Lab;
 
 import java.util.*;
 
@@ -10,11 +10,12 @@ public class CitiesByContinentAndCountry
 
         LinkedHashMap<String, LinkedHashMap<String, List<String>>> locations = new LinkedHashMap<>();
 
-        int n = Integer.parseInt(scanner.nextLine());
+        int numberOfLocations = Integer.parseInt(scanner.nextLine());
 
-        for(int i = 0; i < n; i++)
+        for(int i = 0; i < numberOfLocations; i++)
         {
             String[] locationsInfo = scanner.nextLine().split(" ");
+
             String continent = locationsInfo[0];
             String country = locationsInfo[1];
             String city = locationsInfo[2];
@@ -22,8 +23,10 @@ public class CitiesByContinentAndCountry
             if(!locations.containsKey(continent))
             {
                 LinkedHashMap<String, List<String>> countryAndCity = new LinkedHashMap<>();
+
                 countryAndCity.putIfAbsent(country, new ArrayList<>());
                 countryAndCity.get(country).add(city);
+
                 locations.put(continent, countryAndCity);
             }
             else
@@ -45,11 +48,10 @@ public class CitiesByContinentAndCountry
             System.out.println(continent.getKey() + ":");
             for(Map.Entry<String, List<String>> country : continent.getValue().entrySet())
             {
-                System.out.printf("  %s -> ",country.getKey());
+                System.out.printf("  %s -> ", country.getKey());
                 System.out.print(String.join(", ", country.getValue()));
                 System.out.println();
             }
         }
-
     }
 }
