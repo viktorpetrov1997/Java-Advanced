@@ -10,9 +10,7 @@ public class ReadFile
 {
     public static void main(String[] args)
     {
-        Scanner scanner = new Scanner(System.in);
-
-        String path = "C:\\Users\\User\\Desktop\\Софтуерно инженерство\\Java Advanced\\5. Streams, Files and Directories\\Streams, Files and Directories - Resources\\input.txt";
+        String path = "C:\\Users\\User\\Desktop\\Софтуерно инженерство\\Java Advanced\\5. Streams, Files and Directories\\Streams, Files and Directories - Task Resources\\1. Read File\\input.txt";
 
         try(FileInputStream fileStream = new FileInputStream(path))
         {
