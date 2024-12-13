@@ -7,7 +7,7 @@ public class WriteEveryThirdLine
 {
     public static void main(String[] args)
     {
-        String basePath = "C:\\Users\\User\\Desktop\\Софтуерно инженерство\\Java Advanced\\5. Streams, Files and Directories\\Streams, Files and Directories - Task Resources\\5. Write Every Third Line";
+        String basePath = "C:\\Users\\User\\Desktop\\Софтуерно инженерство\\Java Advanced\\5. Streams, Files and Directories\\Streams, Files and Directories - Resources\\Lab\\5. Write Every Third Line";
         String inputPath = basePath + "\\input.txt";
         String outputPath = basePath + "\\output.txt";
 

@@ -8,7 +8,7 @@ public class NestedFolders
 {
     public static void main(String[] args)
     {
-        Path folderPath = Paths.get("C:\\Users\\User\\Desktop\\Софтуерно инженерство\\Java Advanced\\5. Streams, Files and Directories\\Streams, Files and Directories - Task Resources\\8. Nested Folders");
+        Path folderPath = Paths.get("C:\\Users\\User\\Desktop\\Софтуерно инженерство\\Java Advanced\\5. Streams, Files and Directories\\Streams, Files and Directories - Resources\\Lab\\8. Nested Folders");
 
         if(Files.exists(folderPath) && Files.isDirectory(folderPath))
         {

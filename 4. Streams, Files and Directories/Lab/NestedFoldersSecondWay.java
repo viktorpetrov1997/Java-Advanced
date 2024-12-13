@@ -8,7 +8,7 @@ public class NestedFoldersSecondWay
 {
     public static void main(String[] args)
     {
-        String path = "C:\\Users\\User\\Desktop\\Софтуерно инженерство\\Java Advanced\\5. Streams, Files and Directories\\Streams, Files and Directories - Task Resources\\8. Nested Folders";
+        String path = "C:\\Users\\User\\Desktop\\Софтуерно инженерство\\Java Advanced\\5. Streams, Files and Directories\\Streams, Files and Directories - Resources\\Lab\\8. Nested Folders";
         File root = new File(path);
 
         Deque<File> dirs = new ArrayDeque<>();

@@ -11,7 +11,7 @@ public class SortLines
 {
     public static void main(String[] args) throws IOException
     {
-        String basePath = "C:\\Users\\User\\Desktop\\Софтуерно инженерство\\Java Advanced\\5. Streams, Files and Directories\\Streams, Files and Directories - Task Resources\\6. Sort Lines";
+        String basePath = "C:\\Users\\User\\Desktop\\Софтуерно инженерство\\Java Advanced\\5. Streams, Files and Directories\\Streams, Files and Directories - Resources\\Lab\\6. Sort Lines";
         String inputPath = basePath + "\\input.txt";
         String outputPath = basePath + "\\output.txt";
 
