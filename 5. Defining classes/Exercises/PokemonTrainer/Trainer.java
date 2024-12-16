@@ -1,5 +1,6 @@
 package DefiningClasses.Exercises.PokemonTrainer;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Trainer
@@ -22,16 +23,42 @@ public class Trainer
 
     public void executeCommand(String pokemonElement)
     {
+        boolean elementExists = false;
+
         for(Pokemon pokemon : pokemonList)
         {
             if(pokemon.getElement().equals(pokemonElement))
             {
                 this.numberOfBadges += 1;
+                elementExists = true;
+                break;
             }
-            else if(pokemon.getHealth() <= 0)
+        }
+
+        if(!elementExists)
+        {
+            for(int i = 0; i < pokemonList.size(); i++)
             {
-                pokemonList.remove(pokemon);
+                pokemonList.get(i).setHealth(pokemonList.get(i).getHealth() - 10);
+                if(pokemonList.get(i).getHealth() <= 0)
+                {
+                    pokemonList.remove(i);
+                    i--;
+                }
             }
+
+            /*
+            List<Pokemon> pokemonsToRemove = new ArrayList<>();
+            for(Pokemon pokemon : pokemonList)
+            {
+                pokemon.setHealth(pokemon.getHealth() - 10);
+                if(pokemon.getHealth() <= 0)
+                {
+                    pokemonsToRemove.add(pokemon);
+                }
+            }
+            pokemonList.removeAll(pokemonsToRemove);
+            */ // Second way to decrease health of pokemons and remove some if necessary
         }
     }
 

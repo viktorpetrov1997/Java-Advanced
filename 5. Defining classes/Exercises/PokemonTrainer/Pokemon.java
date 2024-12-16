@@ -13,6 +13,11 @@ public class Pokemon
         this.health = health;
     }
 
+    public void setHealth(int health)
+    {
+        this.health = health;
+    }
+
     public String getElement()
     {
         return this.element;
