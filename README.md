@@ -3,7 +3,7 @@
 ## Course description
 The "Java Advanced" course examines working with the Java language. In the course, learners will learn to work with linear data structures, solve algorithmic problems (problem solving skills), work with streams, files and directories, as well as create template classes. Attention is paid to the functional programming paradigm, as well as to the main tool based on it - Stream API for processing data streams.
 ## Course content
-* Stack and Queues
+* Stacks and Queues
 * Multidimensional Arrays
 * Sets and Dictionaries Advanced
 * Streams, Files and Directories
