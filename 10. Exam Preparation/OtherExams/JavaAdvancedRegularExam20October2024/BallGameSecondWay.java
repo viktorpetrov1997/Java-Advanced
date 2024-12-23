@@ -1,68 +1,65 @@
-package OtherExamSolutions.JavaAdvancedRegularExam20October2024;
+package OtherExams.JavaAdvancedRegularExam20October2024;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
-public class BallGame
+public class BallGameSecondWay
 {
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
 
-        List<Integer> strengthsList = new ArrayList<>();
-        List<Integer> accuraciesList = new ArrayList<>();
+        ArrayDeque<Integer> strengthsStack = new ArrayDeque<>();
+        Queue<Integer> accuraciesQueue = new ArrayDeque<>();
 
         String[] strengths = scanner.nextLine().split(" ");
         String[] accuracies = scanner.nextLine().split(" ");
 
         for(int i = 0; i < strengths.length; i++)
         {
-            strengthsList.add(Integer.valueOf(strengths[i]));
+            strengthsStack.push(Integer.valueOf(strengths[i]));
         }
 
         for(int i = 0; i < accuracies.length; i++)
         {
-            accuraciesList.add(Integer.valueOf(accuracies[i]));
+            accuraciesQueue.offer(Integer.valueOf(accuracies[i]));
         }
 
         int totalGoals = 0;
 
-        while(!strengthsList.isEmpty() && !accuraciesList.isEmpty())
+        while(!strengthsStack.isEmpty() && !accuraciesQueue.isEmpty())
         {
-            int strength = strengthsList.get(strengthsList.size() - 1);
-            int accuracy = accuraciesList.get(0);
+            int strength = strengthsStack.peek();
+            int accuracy = accuraciesQueue.peek();
 
             int sum = strength + accuracy;
             if(sum == 100)
             {
-                strengthsList.remove(strengthsList.size() - 1);
-                accuraciesList.remove(0);
+                strengthsStack.pop();
+                accuraciesQueue.poll();
                 ++totalGoals;
             }
             else if(sum < 100)
             {
                 if(strength < accuracy)
                 {
-                    strengthsList.remove(strengthsList.size() - 1);
+                    strengthsStack.pop();
                 }
                 else if(strength > accuracy)
                 {
-                    accuraciesList.remove(0);
+                    accuraciesQueue.poll();
                 }
                 else
                 {
-                    strengthsList.remove(strengthsList.size() - 1);
-                    strengthsList.add(sum);
-                    accuraciesList.remove(0);
+                    strengthsStack.pop();
+                    strengthsStack.push(sum);
+                    accuraciesQueue.poll();
                 }
             }
             else
             {
-                strengthsList.remove(strengthsList.size() - 1);
-                strengthsList.add(strength - 10);
-                accuraciesList.add(accuracy);
-                accuraciesList.remove(0);
+                strengthsStack.pop();
+                strengthsStack.push(strength - 10);
+                accuraciesQueue.add(accuraciesQueue.poll());
             }
         }
 
@@ -88,14 +85,16 @@ public class BallGame
             System.out.printf("Goals scored: %d%n", totalGoals);
         }
 
-        if(!strengthsList.isEmpty())
+        if(!strengthsStack.isEmpty())
         {
+            List<Integer> strengthsList = new ArrayList<>(strengthsStack);
+            Collections.reverse(strengthsList);
             System.out.println("Strength values left: " + strengthsList.toString().replaceAll("\\[|\\]", ""));
         }
 
-        if(!accuraciesList.isEmpty())
+        if(!accuraciesQueue.isEmpty())
         {
-            System.out.println("Accuracy values left: " + accuraciesList.toString().replaceAll("\\[|\\]", ""));
+            System.out.println("Accuracy values left: " + accuraciesQueue.toString().replaceAll("\\[|\\]", ""));
         }
     }
 }
