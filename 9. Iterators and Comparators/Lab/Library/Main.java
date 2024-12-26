@@ -2,7 +2,7 @@ package IteratorsAndComparators.Lab.Library;
 
 import java.util.Iterator;
 
-public class Main
+public class Main // This task must be submitted with a package called 'Library'.
 {
     public static void main(String[] args)
     {

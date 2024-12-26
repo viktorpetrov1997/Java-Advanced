@@ -1,9 +1,9 @@
-package IteratorsAndComparators.Lab.Book;
+package IteratorsAndComparators.Lab.BookComparator;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main // This task must be submitted with a package called 'Book'.
+public class Main // This task must be submitted with a package called 'BookComparator'.
 {
     public static void main(String[] args)
     {
@@ -15,5 +15,12 @@ public class Main // This task must be submitted with a package called 'Book'.
         books.add(bookOne);
         books.add(bookTwo);
         books.add(bookThree);
+
+        books.sort(new BookComparator());
+
+        for(Book book : books)
+        {
+            System.out.println("Title: " + book.getTitle() + ", Year: " + book.getYear());
+        }
     }
 }
