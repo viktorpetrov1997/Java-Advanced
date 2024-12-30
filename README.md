@@ -1,5 +1,5 @@
 ![logo](https://github.com/viktorpetrov1997/Programming-Fundamentals-Java/assets/126717931/70482e4e-46c0-4f53-9db2-a2676a0b4b6b)
-# Java-Advanced
+# Java Advanced
 ## Course description
 The "Java Advanced" course examines working with the Java language. In the course, learners will learn to work with linear data structures, solve algorithmic problems (problem solving skills), work with streams, files and directories, as well as create template classes. Attention is paid to the functional programming paradigm, as well as to the main tool based on it - Stream API for processing data streams.
 ## Course content
